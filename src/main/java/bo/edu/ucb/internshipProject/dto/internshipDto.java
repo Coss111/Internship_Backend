@@ -4,113 +4,138 @@ import java.time.OffsetDateTime;
 import java.util.List;
 
 public class internshipDto {
-    private Integer interId;
-    private String name;
-    private String description;
-    private String responsability;
-    private String requirement;
-    private OffsetDateTime date;
-    private OffsetDateTime deadline;
-    private List<Integer> degreeIDS;
-    private List<Integer> companyID;
-    private String image;
+    private Integer intershipId;
+    private String intershipName;
+    private String intershipDescription;
+    private String intershipResponsability;
+    private String intershipRequirement;
+    private OffsetDateTime intershipDate;
+    private OffsetDateTime intershipDeadline;
+    private List<Integer> intershipCegreeIDS;
+    private List<Integer> intershipCompanyID;
+    private String intershipImage;
 
     public internshipDto() {
     }
 
-    public int getInterId() {
-        return interId;
+    
+    public Integer getIntershipId() {
+        return intershipId;
     }
 
-    public void setInterId(Integer interId) {
-        this.interId = interId;
+
+    public void setIntershipId(Integer intershipId) {
+        this.intershipId = intershipId;
     }
 
-    public String getName() {
-        return name;
+
+    public String getIntershipName() {
+        return intershipName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public void setIntershipName(String intershipName) {
+        this.intershipName = intershipName;
     }
 
-    public String getDescription() {
-        return description;
+
+    public String getIntershipDescription() {
+        return intershipDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+
+    public void setIntershipDescription(String intershipDescription) {
+        this.intershipDescription = intershipDescription;
     }
 
-    public String getResponsability() {
-        return responsability;
+
+    public String getIntershipResponsability() {
+        return intershipResponsability;
     }
 
-    public void setResponsability(String responsability) {
-        this.responsability = responsability;
+
+    public void setIntershipResponsability(String intershipResponsability) {
+        this.intershipResponsability = intershipResponsability;
     }
 
-    public String getRequirement() {
-        return requirement;
+
+    public String getIntershipRequirement() {
+        return intershipRequirement;
     }
 
-    public void setRequirement(String requirement) {
-        this.requirement = requirement;
+
+    public void setIntershipRequirement(String intershipRequirement) {
+        this.intershipRequirement = intershipRequirement;
     }
 
-    public OffsetDateTime getDate() {
-        return date;
+
+    public OffsetDateTime getIntershipDate() {
+        return intershipDate;
     }
 
-    public void setDate(OffsetDateTime date) {
-        this.date = date;
+
+    public void setIntershipDate(OffsetDateTime intershipDate) {
+        this.intershipDate = intershipDate;
     }
 
-    public OffsetDateTime getDeadline() {
-        return deadline;
+
+    public OffsetDateTime getIntershipDeadline() {
+        return intershipDeadline;
     }
 
-    public void setDeadline(OffsetDateTime deadline) {
-        this.deadline = deadline;
+
+    public void setIntershipDeadline(OffsetDateTime intershipDeadline) {
+        this.intershipDeadline = intershipDeadline;
     }
 
-    public List<Integer> getDegreeIDS() {
-        return degreeIDS;
+
+    public List<Integer> getIntershipCegreeIDS() {
+        return intershipCegreeIDS;
     }
 
-    public void setDegreeIDS(List<Integer> degreeIDS) {
-        this.degreeIDS = degreeIDS;
+
+    public void setIntershipCegreeIDS(List<Integer> intershipCegreeIDS) {
+        this.intershipCegreeIDS = intershipCegreeIDS;
     }
 
-    public List<Integer> getCompanyID() {
-        return companyID;
+
+    public List<Integer> getIntershipCompanyID() {
+        return intershipCompanyID;
     }
 
-    public void setCompanyID(List<Integer> value) {
-        this.companyID = value;
+
+    public void setIntershipCompanyID(List<Integer> intershipCompanyID) {
+        this.intershipCompanyID = intershipCompanyID;
     }
 
-    public String getImage() {
-        return image;
+
+    public String getIntershipImage() {
+        return intershipImage;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+
+    public void setIntershipImage(String intershipImage) {
+        this.intershipImage = intershipImage;
     }
+
 
     @Override
     public String toString() {
-        return "internshipDto{" +
-                "interId='" + getInterId() + "'" +
-                ", name='" + getName() + "'" +
-                ", description='" + getDescription() + "'" +
-                ", responsability='" + getResponsability() + "'" +
-                ", requirement='" + getRequirement() + "'" +
-                ", date='" + getDate() + "'" +
-                ", deadline='" + getDeadline() + "'" +
-                ", degreeIDS='" + getDegreeIDS() + "'" +
-                ", companyID='" + getCompanyID() + "'" +
-                ", image='" + getImage() + "'" +
-                "}";
+        return "internshipDto [intershipId=" + intershipId + ", intershipName=" + intershipName
+                + ", intershipDescription=" + intershipDescription + ", intershipResponsability="
+                + intershipResponsability + ", intershipRequirement=" + intershipRequirement + ", intershipDate="
+                + intershipDate + ", intershipDeadline=" + intershipDeadline + ", intershipCegreeIDS="
+                + intershipCegreeIDS + ", intershipCompanyID=" + intershipCompanyID + ", intershipImage="
+                + intershipImage + "]";
     }
+    
+
+    
+
+
+    
+
+
+
+    
 }

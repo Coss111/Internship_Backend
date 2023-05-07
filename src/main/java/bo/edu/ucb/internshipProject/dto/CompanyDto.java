@@ -4,6 +4,7 @@ import java.time.OffsetDateTime;
 import java.util.List;
 
 public class CompanyDto {
+    private Integer companyId;
     private String name;
     private String description;
     private OffsetDateTime date;
@@ -12,6 +13,10 @@ public class CompanyDto {
 
     public CompanyDto() {
     }
+
+    public Integer getCompanyId() { return companyId; }
+
+    public void setCompanyId(Integer value) { this.companyId = value; }
     
     public String getName() { return name; }
     
