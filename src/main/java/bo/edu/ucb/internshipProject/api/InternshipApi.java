@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 import bo.edu.ucb.internshipProject.bl.AuthBl;
+import bo.edu.ucb.internshipProject.dto.InternshipDto;
 import bo.edu.ucb.internshipProject.dto.ResponseDto;
-import bo.edu.ucb.internshipProject.dto.internshipDto;
 
 @RestController
 @CrossOrigin(origins = "*")
 
 class InternshipApi {
-    private List<internshipDto> internshi = new ArrayList<>();
+    private List<InternshipDto> internshi = new ArrayList<>();
 
 
     /**
@@ -30,17 +30,17 @@ class InternshipApi {
      */
 
     @GetMapping("/api/v1/internship")
-    public ResponseEntity<ResponseDto<List<internshipDto>>> getAllInternship(
+    public ResponseEntity<ResponseDto<List<InternshipDto>>> getAllInternship(
         @RequestHeader("Authorization") String token) {
         AuthBl authBl = new AuthBl();
         if (!authBl.validateToken(token)) {
-            ResponseDto<List<internshipDto>> response = new ResponseDto<>();
+            ResponseDto<List<InternshipDto>> response = new ResponseDto<>();
             response.setCode("0001");
             response.setResponse(null);
             response.setErrorMessage("Invalid token");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
-        ResponseDto<List<internshipDto>> response = new ResponseDto<>();
+        ResponseDto<List<InternshipDto>> response = new ResponseDto<>();
         response.setCode("0000");
         response.setResponse(internshi);
         return ResponseEntity.status(HttpStatus.OK).body(response);
@@ -55,9 +55,9 @@ class InternshipApi {
      */
 
      @GetMapping("/api/v1/internship/{idinternship}")
-     public ResponseEntity<ResponseDto<internshipDto>> getTaskById(@PathVariable("idinternship") Integer id,
+     public ResponseEntity<ResponseDto<InternshipDto>> getTaskById(@PathVariable("idinternship") Integer id,
              @RequestHeader("Authorization") String token) {
-         ResponseDto<internshipDto> response = new ResponseDto<>();
+         ResponseDto<InternshipDto> response = new ResponseDto<>();
          AuthBl authBl = new AuthBl();
          if (!authBl.validateToken(token)) {
              response.setCode("0001");
@@ -66,7 +66,7 @@ class InternshipApi {
              return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
          }
          // Buscamos el elemento en la lista
-         internshipDto intership = internshi.stream()
+         InternshipDto intership = internshi.stream()
                  .filter(t -> t.getIntershipId().equals(id))
                  .findFirst()
                  .orElse(null);
@@ -95,10 +95,10 @@ class InternshipApi {
      */
 
     @GetMapping("/api/v1/internship/{idinternship}")
-    public ResponseEntity<ResponseDto<internshipDto>>updateInternshipById(@PathVariable("idinternship") Integer idInternship,
-            @RequestBody internshipDto newInternship,
+    public ResponseEntity<ResponseDto<InternshipDto>>updateInternshipById(@PathVariable("idinternship") Integer idInternship,
+            @RequestBody InternshipDto newInternship,
             @RequestHeader("Authorization") String token) {
-        ResponseDto<internshipDto> response = new ResponseDto<>();
+        ResponseDto<InternshipDto> response = new ResponseDto<>();
         AuthBl authBl = new AuthBl();
         if (!authBl.validateToken(token)) {
             response.setCode("0001");
@@ -113,7 +113,7 @@ class InternshipApi {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
         }
         
-        internshipDto intership = internshi.stream()
+        InternshipDto intership = internshi.stream()
                 .filter(t -> t.getIntershipId().equals(idInternship))
                 .findFirst()
                 .orElse(null);
@@ -152,7 +152,7 @@ class InternshipApi {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
         
-        internshipDto intership = internshi.stream()
+        InternshipDto intership = internshi.stream()
                 .filter(t -> t.getIntershipId().equals(idInternship))
                 .findFirst()
                 .orElse(null);
@@ -179,7 +179,7 @@ class InternshipApi {
      */
 
     @PostMapping("/api/v1/internship")
-    public ResponseEntity<ResponseDto<String>> createInternship(@RequestBody internshipDto newInternship,
+    public ResponseEntity<ResponseDto<String>> createInternship(@RequestBody InternshipDto newInternship,
             @RequestHeader("Authorization") String token) {
         ResponseDto<String> response = new ResponseDto<>();
         AuthBl authBl = new AuthBl();

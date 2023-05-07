@@ -3,7 +3,7 @@ package bo.edu.ucb.internshipProject.dto;
 import java.time.OffsetDateTime;
 import java.util.List;
 
-public class internshipDto {
+public class InternshipDto {
     private Integer intershipId;
     private String intershipName;
     private String intershipDescription;
@@ -15,7 +15,7 @@ public class internshipDto {
     private List<Integer> intershipCompanyID;
     private String intershipImage;
 
-    public internshipDto() {
+    public InternshipDto() {
     }
 
     
