@@ -2,7 +2,7 @@ package bo.edu.ucb.internshipProject.dto;
 import java.time.OffsetDateTime;
 import java.util.List;
 
-public class internshipDto {
+public class InternshipDto {
     private Integer interId;
     private String name;
     private String description;
@@ -10,13 +10,13 @@ public class internshipDto {
     private String requirement;
     private OffsetDateTime date;
     private OffsetDateTime deadline;
-    private List<Long> degreeIDS;
-    private List<Long> companyID;
+    private List<Integer> degreeIDS;
+    private List<Integer> companyID;
     private String image;
 
     
 
-    public internshipDto() {
+    public InternshipDto() {
     }
 
     public int getInterId() {
@@ -75,19 +75,19 @@ public class internshipDto {
         this.deadline = deadline;
     }
 
-    public List<Long> getDegreeIDS() {
+    public List<Integer> getDegreeIDS() {
         return degreeIDS;
     }
 
-    public void setDegreeIDS(List<Long> degreeIDS) {
+    public void setDegreeIDS(List<Integer> degreeIDS) {
         this.degreeIDS = degreeIDS;
     }
 
-    public List<Long> getCompanyID() {
+    public List<Integer> getCompanyID() {
         return companyID;
     }
 
-    public void setCompanyID(List<Long> value) {
+    public void setCompanyID(List<Integer> value) {
         this.companyID = value;
     }
 

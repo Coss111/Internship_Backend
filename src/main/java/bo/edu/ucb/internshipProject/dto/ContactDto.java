@@ -2,31 +2,53 @@ package bo.edu.ucb.internshipProject.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ContactDto {
-    private String email;
-    private String phone;
-    private String facebook;
+    private Integer contactId;
+    private String contactEmail;
+    private String contactPhone;
+    private String contactFacebook;
 
     public ContactDto() {
     }
 
-    public String getEmail() { return email; }
-    
-    public void setEmail(String value) { this.email = value; }
+    public Integer getContactId() {
+        return contactId;
+    }
 
-    public String getPhone() { return phone; }
-    
-    public void setPhone(String value) { this.phone = value; }
+    public void setContactId(Integer contactId) {
+        this.contactId = contactId;
+    }
 
-    public String getFacebook() { return facebook; }
-    
-    public void setFacebook(String value) { this.facebook = value; }
+    public String getContactEmail() {
+        return contactEmail;
+    }
+
+    public void setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+    }
+
+    public String getContactPhone() {
+        return contactPhone;
+    }
+
+    public void setContactPhone(String contactPhone) {
+        this.contactPhone = contactPhone;
+    }
+
+    public String getContactFacebook() {
+        return contactFacebook;
+    }
+
+    public void setContactFacebook(String contactFacebook) {
+        this.contactFacebook = contactFacebook;
+    }
 
     @Override
     public String toString() {
         return "ContactDto{" +
-                "email='" + getEmail() + '\'' +
-                ", phone='" + getPhone() + '\'' +
-                ", facebook='" + getFacebook() + '\'' +
+                "contactId=" + contactId +
+                ", contactEmail='" + contactEmail + '\'' +
+                ", contactPhone='" + contactPhone + '\'' +
+                ", contactFacebook='" + contactFacebook + '\'' +
                 '}';
     }
 }

@@ -4,43 +4,73 @@ import java.time.OffsetDateTime;
 import java.util.List;
 
 public class CompanyDto {
-    private String name;
-    private String description;
-    private OffsetDateTime date;
-    private List<ContactDto> contacts;
-    private String image;
+    private Integer companyId;
+    private String companyName;
+    private String companyDescription;
+    private OffsetDateTime companyDate;
+    private List<ContactDto> companyContacts;
+    private String companyImage;
 
     public CompanyDto() {
     }
-    
-    public String getName() { return name; }
-    
-    public void setName(String value) { this.name = value; }
 
-    public String getDescription() { return description; }
-    
-    public void setDescription(String value) { this.description = value; }
+    public Integer getCompanyId() {
+        return companyId;
+    }
 
-    public OffsetDateTime getDate() { return date; }
-    
-    public void setDate(OffsetDateTime value) { this.date = value; }
+    public String getCompanyName() {
+        return companyName;
+    }
 
-    public List<ContactDto> getContacts() { return contacts; }
-    
-    public void setContacts(List<ContactDto> value) { this.contacts = value; }
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
-    public String getImage() { return image; }
-    
-    public void setImage(String value) { this.image = value; }
+    public String getCompanyDescription() {
+        return companyDescription;
+    }
+
+    public void setCompanyDescription(String companyDescription) {
+        this.companyDescription = companyDescription;
+    }
+
+    public OffsetDateTime getCompanyDate() {
+        return companyDate;
+    }
+
+    public void setCompanyDate(OffsetDateTime companyDate) {
+        this.companyDate = companyDate;
+    }
+
+    public List<ContactDto> getCompanyContacts() {
+        return companyContacts;
+    }
+
+    public void setCompanyContacts(List<ContactDto> companyContacts) {
+        this.companyContacts = companyContacts;
+    }
+
+    public String getCompanyImage() {
+        return companyImage;
+    }
+
+    public void setCompanyImage(String companyImage) {
+        this.companyImage = companyImage;
+    }
+
+    public void setCompanyId(Integer companyId) {
+        this.companyId = companyId;
+    }
 
     @Override
     public String toString() {
         return "CompanyDto{" +
-                "name='" + getName() + '\'' +
-                ", description='" + getDescription() + '\'' +
-                ", date=" + getDate() +
-                ", contacts=" + getContacts() +
-                ", image='" + getImage() + '\'' +
+                "companyId=" + companyId +
+                ", companyName='" + companyName + '\'' +
+                ", companyDescription='" + companyDescription + '\'' +
+                ", companyDate=" + companyDate +
+                ", companyContacts=" + companyContacts +
+                ", companyImage='" + companyImage + '\'' +
                 '}';
     }
 }
